@@ -1,0 +1,40 @@
+<html>
+
+<head>
+
+    <style>
+        .elem {
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            margin: 10px;
+            background-color: gray;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="elem">
+        This is an element
+    </div>
+    <div class="elem">
+        This is another element
+    </div>
+    <div class="elem">
+        This is another one
+    </div>
+    <div class="elem">
+        Last Element
+    </div>
+
+    <script>
+        Array.from(document.getElementsByClassName('elem')).forEach((elem, index) => {
+            elem.addEventListener('click', event => {
+                elem.innerHTML = "This is an element numbero " + (index + 1);
+            });
+        })
+    </script>
+</body>
+
+</html>
